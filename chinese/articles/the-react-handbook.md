@@ -6,71 +6,95 @@
 ![The React Handbook](https://cdn-media-1.freecodecamp.org/images/1*m5aPLXkrWJs7xKsfYViJEg.png)
 
 The React Handbook follows the 80/20 rule: learn in 20% of the time the 80% of a topic.
+
 React 手册遵循二八原则：用 20% 的时间学习 80% 的内容。
 
 I find this approach gives a well-rounded overview. This book does not try to cover everything under the sun related to React, but it should give you the basic building blocks to get out there and become a great React developer. If you think some specific topic should be included, tell me. You can reach me on Twitter  [@flaviocopes][1].
 
+我发现这种方式提供了全面的概述。本书不打算涵盖所有与 React 相关的内容，但它应该为你提供成为优秀 React 开发者所必须掌握的基础知识。如果你希望本书中包含一些特定的内容，你可以在 Twitter([@flaviocopes][1]) 上联系我。
+
 I hope the contents of this book will help you achieve what you want:  **learn the basics of React**.
+
+我希望本书的内容能帮你实现你的目标：学习 React 基础。
 
 You can get this ebook in PDF, ePub and Mobi format at  [reacthandbook.com][2]
 
+你可以在 [reacthandbook.com][2] 上获取这本电子书的 PDF，ePub，Mobi版本。
+
 ### Book Index
 
+### 索引
+
 #### Table of Contents
+
+#### 目录
 
 [An introduction to React][3]  
 [How to use create-react-app][4]
 
+[React 简介][3]
+[如何使用 create-react-app][4]
+
 ****SECTION 1****: MODERN JAVASCRIPT CORE CONCEPTS YOU NEED TO KNOW TO USE REACT
 
--   [Variables][5]
--   [Arrow functions][6]
--   [Rest and spread][7]
--   [Object and array destructuring][8]
--   [Template literals][9]
--   [Classes][10]
--   [Callbacks][11]
--   [Promises][12]
--   [Async/Await][13]
--   [ES Modules][14]
+****第一节****: 你需要掌握的现代 JAVASCRIPT 核心概念
+
+-   [Variables][5]  [变量][5]
+-   [Arrow functions][6]   [箭头函数][6]
+-   [Rest and spread][7]   [Rest 参数和拓展运算符][7]
+-   [Object and array destructuring][8]   [对象和数组的解构][8]
+-   [Template literals][9]   [模版字符串][9]
+-   [Classes][10]   [类][10]
+-   [Callbacks][11]   [回调][11]
+-   [Promises][12]   [Promises][12]
+-   [Async/Await][13]   [Async/Await][13]
+-   [ES Modules][14]   [ES 模块][14]
 
 ****SECTION 2****: REACT CONCEPTS
 
--   [Single Page Applications][15]
--   [Declarative][16]
--   [Immutability][17]
--   [Purity][18]
--   [Composition][19]
--   [The Virtual DOM][20]
--   [Unidirectional Data Flow][21]
+****第二节****: REACT 核心概念
+
+-   [Single Page Applications][15]   [单页应用][15]
+-   [Declarative][16]   [声明式编程][16]
+-   [Immutability][17]   [不可变数据][17]
+-   [Purity][18]   [纯函数][18]
+-   [Composition][19]   [组合][19]
+-   [The Virtual DOM][20]   [虚拟 DOM][20]
+-   [Unidirectional Data Flow][21]   [单向数据流][21]
 
 ****SECTION 3****: IN-DEPTH REACT
 
+****第三节****: REACT 高级概念
+
 -   [JSX][22]
--   [Components][23]
--   [State][24]
--   [Props][25]
--   [Presentational vs container components][26]
--   [State vs props][27]
+-   [Components][23]   [组件][23]
+-   [State][24]   [状态][24]
+-   [Props][25]   [属性][25]
+-   [Presentational vs container components][26]   [展示组件和容器组件][26]
+-   [State vs props][27]   [状态和属性][27]
 -   [PropTypes][28]
 -   [React Fragment][29]
--   [Events][30]
--   [Lifecycle Events][31]
--   [Forms in React][32]
--   [Reference a DOM element][33]
--   [Server side rendering][34]
+-   [Events][30]   [事件][30]
+-   [Lifecycle Events][31]   [生命周期][31]
+-   [Forms in React][32]   [React 表单][32]
+-   [Reference a DOM element][33]   [DOM 元素引用][33]
+-   [Server side rendering][34]   [服务端渲染][34]
 -   [The Context API][35]
--   [Higher order components][36]
+-   [Higher order components][36]   [高阶组件][36]
 -   [Render Props][37]
 -   [Hooks][38]
--   [Code splitting][39]
+-   [Code splitting][39]   [代码分割][39]
 
 ****SECTION 4****: PRACTICAL EXAMPLES
+
+****第四节****: 实战示例
 
 -   [Build a simple counter][40]
 -   [Fetch and display GitHub users information via API][41]
 
 ****SECTION 5****: STYLING
+
+****第五节****: 样式
 
 -   [CSS in React][42]
 -   [SASS in React][43]
@@ -78,15 +102,21 @@ You can get this ebook in PDF, ePub and Mobi format at  [reacthandbook.com][2]
 
 ****SECTION 6****: TOOLING
 
+****第六节****: 构建工具
+
 -   [Babel][45]
 -   [Webpack][46]
 
 ****SECTION 7****: TESTING
 
+****第七节****: 测试
+
 -   [Jest][47]
 -   [Testing React components][48]
 
 ****SECTION 8****: THE REACT ECOSYSTEM
+
+****第八节****: React 生态
 
 -   [React Router][49]
 -   [Redux][50]
@@ -96,26 +126,43 @@ You can get this ebook in PDF, ePub and Mobi format at  [reacthandbook.com][2]
 [Wrapping up][53]
 
 ### An introduction to the React view library
+### React 简介
 
 #### What is React?
+#### React 是什么？
 
 React is a JavaScript library that aims to simplify development of visual interfaces.
 
+React 是一个 JavaScript 库，旨在简化可视化界面的开发。
+
 Developed at Facebook and released to the world in 2013, it drives some of the most widely used apps, powering Facebook and Instagram among countless other applications.
+
+由 Facebook 开发并于 2013 年向全球发布，它驱动了一些最广泛使用的应用程序 // todos
 
 Its primary goal is to make it easy to reason about an interface and its state at any point in time, by dividing the UI into a collection of components.
 
+它的主要目标是通过将 UI 划分为一些列的组件，使得在任意时间节点，界面及其状态是可控的。
+
 #### Why is React so popular?
+#### React 为什么如此流行？
 
 React has taken the frontend web development world by storm. Why?
 
+React 已经风靡了前端 Web 开发的世界。为什么？
+
 #### Less complex than the other alternatives
+#### 比其它替代品更简单
 
 At the time when React was announced, Ember.js and Angular 1.x were the predominant choices as a framework. Both these imposed so many conventions on the code that porting an existing app was not convenient at all.
 
+当 React 发布时，Ember.js 和 Angular.js 是前端框架的主要选择。这两个框架对代码做了太多的限制以至于迁移一个现有的应用程序一点也不方便。
+
 React made a choice to be very easy to integrate into an existing project, because that’s how they had to do it at Facebook in order to introduce it to the existing codebase. Also, those 2 frameworks brought too much to the table, while React only chose to implement the View layer instead of the full MVC stack.
 
+使用 React 很容易集成进现有的项目，因为只有这样做，Facebook 才能将它引入到现有的代码库中。而且，那两个框架带来了太多东西，而 React 选择只实现 View 层而不是完整的 MVC。
+
 #### Perfect timing
+#### 完美的时机
 
 At the time, Angular 2.x was announced by Google, along with the backwards incompatibility and major changes it was going to bring. Moving from Angular 1 to 2 was like moving to a different framework, so this, along with execution speed improvements that React promised, made it something developers were eager to try.
 
