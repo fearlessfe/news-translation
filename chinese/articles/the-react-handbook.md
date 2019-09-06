@@ -6,6 +6,7 @@
 ![The React Handbook](https://cdn-media-1.freecodecamp.org/images/1*m5aPLXkrWJs7xKsfYViJEg.png)
 
 The React Handbook follows the 80/20 rule: learn in 20% of the time the 80% of a topic.
+React 手册遵循二八原则：用 20% 的时间学习 80% 的内容。
 
 I find this approach gives a well-rounded overview. This book does not try to cover everything under the sun related to React, but it should give you the basic building blocks to get out there and become a great React developer. If you think some specific topic should be included, tell me. You can reach me on Twitter  [@flaviocopes][1].
 
