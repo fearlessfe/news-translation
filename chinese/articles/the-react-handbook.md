@@ -166,38 +166,64 @@ React made a choice to be very easy to integrate into an existing project, becau
 
 At the time, Angular 2.x was announced by Google, along with the backwards incompatibility and major changes it was going to bring. Moving from Angular 1 to 2 was like moving to a different framework, so this, along with execution speed improvements that React promised, made it something developers were eager to try.
 
+当时，谷歌刚公布 Angular 2.x，它带来了重大的变化而且向后不兼容。因为从 Angular 1 迁移到 2 就像迁移到不同的框架,同时 React 承诺执行速度的提升，使得开发人员急着去尝试 React。
+
 #### Backed by Facebook
+#### Facebook 提供支持
 
 Being backed by Facebook is, of course, going to benefit a project if it turns out to be successful.
 
+当然，如果 React 成功的话，那么由 Facebook 提供支持将会使项目受益。
+
 Facebook currently has a strong interest in React, sees the value of it being Open Source, and this is a huge plus for all the developers using it in their own projects.
 
+Facebook目前对 React 有浓厚的兴趣，并且看到了它开源的价值。这对于所有在项目中使用到它的开发者来说也是一个巨大的优势。
+
 #### Is React simple to learn?
+#### React 学起来简单吗？
 
 Even though I said that React is simpler than alternative frameworks, diving into React is still complicated, but mostly because of the corollary technologies that can be integrated with React, like Redux and GraphQL.
 
+即使我说过 React 比其它可选择的框架要简单，深入了解 React 还是很困难，但主要是由于可以和 React 集成的技术所致，如 Redux 和 GraphQL。
+
 React in itself has a very small API, and you basically need to understand 4 concepts to get started:
 
--   Components
+React 本身只有非常少量的 API，你只需要了解一下 4 个概念就能开始了：
+
+-   Components   组件
 -   JSX
--   State
--   Props
+-   State   状态
+-   Props   属性
 
 All these (and more) are explained in this handbook.
 
+所有这些（以及更多）在本手册中均有解释。
+
 #### How to install React on your development computer
+#### 如何在电脑上安装 React
 
 How do you install React?
 
+如何安装 React
+
 React is a library, so saying  _install_  might sound a bit weird. Maybe  _setup_  is a better word, but you get the concept.
+
+React 是一个库，因此说_安装_也许听起来有点奇怪。也许_设置_更准确，但是你知道就好。
 
 There are various ways to setup React so that it can be used on your app or site.
 
+有很多中方式设置 React，这样它就可以在你的应用或网站上使用。
+
 #### Load React directly in the web page
+#### 直接在网页上加载 React
 
 The simplest one is to add the React JavaScript file into the page directly. This is best when your React app will interact with the elements present on a single page, and not actually controls the whole navigation aspect.
 
+最简单的方法是直接将 React 的 JavaScript 文件添加到页面中。当你的 React 应用与单个页面的元素交互，而不需要控制所有的导航时，这是最好的选择。
+
 In this case, you add 2 script tags to the end of the  `body`  tag:
+
+在这种情况下，你只需要在 `body` 标签内最后添加两个 script 标签：
 
 ```html
 <html>
@@ -217,8 +243,11 @@ In this case, you add 2 script tags to the end of the  `body`  tag:
 ```
 
 > _Please change the version number to the latest version of React available._
+> _请将React版本号改为最新版_
 
 Here we loaded both React and React DOM. Why 2 libraries? Because React is 100% independent from the browser and can be used outside it (for example on Mobile devices with React Native). Hence the need for React DOM, to add the wrappers for the browser.
+
+这里我们加载了 React 和 React DOM。为什么加载两个库？因为 React 完全独立于浏览器并且可以用于浏览器之外的环境（比如使用 React 开发移动端应用）。因此需要 React DOM 为浏览器添加包装层。
 
 After those tags you can load your JavaScript files that use React, or even inline JavaScript in a  `script`  tag:
 
