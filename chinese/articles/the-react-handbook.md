@@ -251,6 +251,8 @@ Here we loaded both React and React DOM. Why 2 libraries? Because React is 100% 
 
 After those tags you can load your JavaScript files that use React, or even inline JavaScript in a  `script`  tag:
 
+在这些标签后，你可以加载你自己的用 React 写的 JavaScript 文件，甚至可以直接在 `script` 标签中写 JavaScript 代码：
+
 ```html
 <script src="app.js"></script>
 
@@ -260,17 +262,23 @@ After those tags you can load your JavaScript files that use React, or even inli
 
 To use JSX you need an extra step: load Babel
 
+要使用 JSX 你需要先加载 Babel。
+
 ```html
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 ```
 
 and load your scripts with the special  `text/babel`  MIME type:
 
+并且使用 `text/babel` MIME 类型来加载你的脚本：
+
 ```html
 <script src="app.js" type="text/babel"><;/script>
 ```
 
 Now you can add JSX in your app.js file:
+
+现在你可以在 app.js 中使用 JSX：
 
 ```jsx
 const Button = () => {
@@ -281,11 +289,18 @@ const Button = () => {
 
 Check out this simple Glitch example:  [https://glitch.com/edit/#!/react-example-inline-jsx?path=script.js][55]
 
+在 Glitch 上查看这个简单的示例：[https://glitch.com/edit/#!/react-example-inline-jsx?path=script.js][55]
+
 Starting in this way with script tags is good for building prototypes and enables a quick start without having to set up a complex workflow.
 
+以 script 标签开始对构建原型非常有用，并且无需进行复杂的设置就能快速开始。
+
 ### How to use create-react-app
+### 如何使用 create-react-app
 
 `create-react-app`  is a project aimed at getting you up to speed with React in no time, and any React app that needs to outgrow a single page will find that  `create-react-app`meets that need.
+
+`create-react-app` 项目旨在让你快速搭建 React 项目，`create-react-app` 满足所有超过一页的 React 应用的需求。
 
 You start by using  `[npx][56]`, which is an easy way to download and execute Node.js commands without installing them.  `npx`  comes with  `npm`  (since version 5.2) and if you don't have npm installed already, do it now from  [https://nodejs.org][57]  (npm is installed with Node).
 
@@ -372,8 +387,11 @@ There is no point in being an expert in those topics right away, but the more yo
 I will mention a list of things to get you up to speed quickly.
 
 ### Variables
+### 变量
 
 A variable is a literal assigned to an identifier, so you can reference and use it later in the program.
+
+变量是
 
 Variables in JavaScript do not have any type attached. Once you assign a specific literal type to a variable, you can later reassign the variable to host any other type, without type errors or any issue.
 
@@ -382,8 +400,11 @@ This is why JavaScript is sometimes referred to as “untyped”.
 A variable must be declared before you can use it. There are 3 ways to do this, using  `var`,  `let`  or  `const`, and those 3 ways differ in how you can interact with the variable later on.
 
 #### Using  `var`
+#### 使用 `var`
 
 Until ES2015,  `var`  was the only construct available for defining variables.
+
+直到 ES2015， 只有 `var` 可以声明变量。
 
 ```jsx
 var a = 0
@@ -391,15 +412,23 @@ var a = 0
 
 If you forget to add  `var`  you will be assigning a value to an undeclared variable, and the results might vary.
 
+如果你忘记添加 `var`, 你将为未声明的变量赋值，结果可能不同。
+
 In modern environments, with strict mode enabled, you will get an error. In older environments (or with strict mode disabled) this will simply initialize the variable and assign it to the global object.
 
+在现代的环境，启用严格模式，你会出错。在老的环境(或未开启严格模式)，这将在全局对象上初始化一个变量。
+
 If you don’t initialize the variable when you declare it, it will have the  `undefined`  value until you assign a value to it.
+
+如果当你声明变量而没有初始化时，它的值为 `undefined` 直到你为它赋值。
 
 ```jsx
 var a //typeof a === 'undefined'
 ```
 
 You can redeclare the variable many times, overriding it:
+
+你可以再次声明一个变量来覆盖它：
 
 ```jsx
 var a = 1
@@ -408,13 +437,19 @@ var a = 2
 
 You can also declare multiple variables at once in the same statement:
 
+你也可以在同一语句中一次声明多个变量：
+
 ```js
 var a = 1, b = 2jsx
 ```
 
 The  **scope**  is the portion of code where the variable is visible.
 
+**作用域**是变量在代码中可访问的部分。
+
 A variable initialized with  `var`  outside of any function is assigned to the global object, has a global scope and is visible everywhere. A variable initialized with  `var`  inside a function is assigned to that function, it's local and is visible only inside it, just like a function parameter.
+
+用 `var` 在函数外声明的变量分配给全局对象，具有全局作用域，都可以访问。使用 `var` 在函数内部
 
 Any variable defined in a function with the same name as a global variable takes precedence over the global variable, shadowing it.
 
