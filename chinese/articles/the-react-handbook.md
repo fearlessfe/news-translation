@@ -449,17 +449,26 @@ The  **scope**  is the portion of code where the variable is visible.
 
 A variable initialized with  `var`  outside of any function is assigned to the global object, has a global scope and is visible everywhere. A variable initialized with  `var`  inside a function is assigned to that function, it's local and is visible only inside it, just like a function parameter.
 
-用 `var` 在函数外声明的变量分配给全局对象，具有全局作用域，都可以访问。使用 `var` 在函数内部
+用 `var` 在函数外初始化的变量分配给全局对象，具有全局作用域，都可以访问。使用 `var` 在函数内部初始化的变量分配给该函数，该变量是局部的并且仅在函数内部可以访问，和函数参数类似。
 
 Any variable defined in a function with the same name as a global variable takes precedence over the global variable, shadowing it.
 
+在函数内部定义的变量比全局定义的全局变量具有更高的优先级，也会覆盖全局同名变量。
+
 It’s important to understand that a block (identified by a pair of curly braces) does not define a new scope. A new scope is only created when a function is created, because  `var`  does not have block scope, but function scope.
+
+明白代码块（由一对花括号标识）没有定义一个新的作用域很重要。只有当创建函数时才会生成一个新的作用域，因为 `var` 没有块级作用域，但是函数有块级作用域。
 
 Inside a function, any variable defined in it is visible throughout all the function code, even if the variable is declared at the end of the function it can still be referenced in the beginning, because JavaScript before executing the code actually  _moves all variables on top_  (something that is called  **hoisting**). To avoid confusion, always declare variables at the beginning of a function.
 
+在函数内部，任何定义的变量在函数任意位置都可以访问，即使变量定义在函数最后，也可以在函数开头引用变量，因为 JavaScript 在执行代码之前会将_所有变量移到最上面_（有时也称为**变量提升**）。为了避免混淆，通常在函数开头声明变量。
+
 #### Using  `let`
+#### 使用 `let`
 
 `let`  is a new feature introduced in ES2015 and it's essentially a block scoped version of  `var`. Its scope is limited to the block, statement or expression where it's defined, and all the contained inner blocks.
+
+`let` 是 ES2015 引入的新功能，是具有块级作用域版本的 `var`。
 
 Modern JavaScript developers might choose to only use  `let`  and completely discard the use of  `var`.
 
