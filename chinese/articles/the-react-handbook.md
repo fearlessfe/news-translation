@@ -468,17 +468,26 @@ Inside a function, any variable defined in it is visible throughout all the func
 
 `let`  is a new feature introduced in ES2015 and it's essentially a block scoped version of  `var`. Its scope is limited to the block, statement or expression where it's defined, and all the contained inner blocks.
 
-`let` 是 ES2015 引入的新功能，是具有块级作用域版本的 `var`。
+`let` 是 ES2015 引入的新功能，是具有块级作用域版本的 `var`。它的作用域仅限于定义它的块，语句或表达式，以及所有的内部块。
 
 Modern JavaScript developers might choose to only use  `let`  and completely discard the use of  `var`.
 
+现代 JavaScript 开发者会选择完全摒弃 `var`，只使用 `let`。
+
 > _If  `let`  seems an obscure term, just read  `let color = 'red'`  as_ let the color be red_and it all makes much more sense_
+
+> _如果 `let` 是一个模糊的术语，那只需要将 `let color = 'red'` 理解为_让 color 为 red，_这样就更有意义了_
 
 Defining  `let`  outside of any function - contrary to  `var`  \- does not create a global variable.
 
+和 `var` 比起来，使用 `let` 在函数外定义变量不会创建全局变量。
+
 #### Using  `const`
+#### 使用 `const`
 
 Variables declared with  `var`  or  `let`  can be changed later on in the program, and reassigned. Once a  `const`  is initialized, its value can never be changed again, and it can't be reassigned to a different value.
+
+使用 `var` 和 `let` 声明的变量可以重新赋值。一旦使用 `const` 初始化一个变量，它的值就不能改变，也不能被重新赋值。
 
 ```jsx
 const a = 'test'
@@ -486,21 +495,38 @@ const a = 'test'
 
 We can’t assign a different literal to the  `a`  const. We can however mutate  `a`  if it's an object that provides methods that mutate its contents.
 
+我们不能为 `a` 赋一个不同的值。但如果 `a` 是一个具有修改其内容方法的对象，那我们就可以修改 `a`。
+
 `const`  does not provide immutability, just makes sure that the reference can't be changed.
+
+`const` 不是不能改变，只是确保引用不能改变。
 
 `const`  has block scope, same as  `let`.
 
+和 `let` 一样， `const` 也有块级作用域。 
+
 Modern JavaScript developers might choose to always use  `const`  for variables that don't need to be reassigned later in the program.
+
+现代 JavaScript 开发者总是会选择使用 `const` 来声明不必重新赋值的变量。
 
 Why? Because we should always use the simplest construct available to avoid making errors down the road.
 
+为什么？因为我们总是使用简单的方式来避免以后会发生错误。
+
 ### Arrow functions
+### 箭头函数
 
 Arrow functions were introduced in ES6 / ECMAScript 2015, and since their introduction they changed forever how JavaScript code looks (and works).
 
+箭头函数是在 ES6 / ECMAScript 2015 引入的，它的引入永远的改变了 JavaScript 代码的书写方式（和工作方式）。
+
 In my opinion this change was so welcoming that you now rarely see the usage of the  `function`  keyword in modern codebases.
 
+在我看来，箭头函数是如此受欢迎以至于在现代的代码库中很少看到 `function` 关键字的使用。
+
 Visually, it’s a simple and welcome change, which allows you to write functions with a shorter syntax, from:
+
+这是一个简介而且受欢迎的变化，让你使用更简短的语法来书写函数，从：
 
 ```jsx
 const myFunction = function() {
@@ -509,6 +535,7 @@ const myFunction = function() {
 ```
 
 to
+到：
 
 ```jsx
 const myFunction = () => {
@@ -518,11 +545,15 @@ const myFunction = () => {
 
 If the function body contains just a single statement, you can omit the brackets and write all on a single line:
 
+如果函数体只包含一条语句，你可以省略括号，将代码写在一行内。
+
 ```jsx
 const myFunction = () => doSomething()
 ```
 
 Parameters are passed in the parentheses:
+
+参数写在括号中：
 
 ```jsx
 const myFunction = (param1, param2) => doSomething(param1, param2)
