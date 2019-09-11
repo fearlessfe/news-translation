@@ -561,17 +561,26 @@ const myFunction = (param1, param2) => doSomething(param1, param2)
 
 If you have one (and just one) parameter, you could omit the parentheses completely:
 
+如果只有一个参数，你完全可以省略括号：
+
 ```jsx
 const myFunction = param => doSomething(param)
 ```
 
 Thanks to this short syntax, arrow functions  **encourage the use of small functions**.
 
+由于这个简短的语法，箭头函数鼓励使用小函数。
+
 ### Implicit return
+### 隐式返回
 
 Arrow functions allow you to have an implicit return: values are returned without having to use the  `return`  keyword.
 
+箭头函数可以让你不使用 `return` 关键字返回值。
+
 It works when there is a one-line statement in the function body:
+
+这仅在函数体内只有一行语句的时候有效。
 
 ```jsx
 const myFunction = () => 'test'
@@ -580,18 +589,27 @@ const myFunction = () => 'test'
 
 Another example, when returning an object, remember to wrap the curly brackets in parentheses to avoid it being considered the wrapping function body brackets:
 
+另外一个例子，当返回一个对象时，记得使用括号将大括号包裹起来，这样避免被当作函数体的括号。
+
 ```jsx
 const myFunction = () => ({ value: 'test' })
 
 ```
 
 ### How this works in arrow functions
+### 箭头函数内 this 指向
 
 `this`  is a concept that can be complicated to grasp, as it varies a lot depending on the context and also varies depending on the mode of JavaScript (_strict mode_  or not).
 
+`this` 是一个难以理解的概念，根据上下文和 JavaScript 模式（是否为_严格模式_）的不同，它的指向也不同。
+
 It’s important to clarify this concept because arrow functions behave very differently compared to regular functions.
 
+阐明这个概念很重要，因为箭头函数和常规函数表现完全不同。
+
 When defined as a method of an object, in a regular function  `this`  refers to the object, so you can do:
+
+作为一个对象的方法，常规函数内的 `this` 指向当前对象，所以你可以这样做：
 
 ```jsx
 const car = {
@@ -605,7 +623,11 @@ const car = {
 
 calling  `car.fullName()`  will return  `"Ford Fiesta"`.
 
+调用 `car.fullName()` 将返回 `"Ford Fiesta"`。
+
 The  `this`  scope with arrow functions is  **inherited**  from the execution context. An arrow function does not bind  `this`  at all, so its value will be looked up in the call stack, so in this code  `car.fullName()`  will not work, and will return the string  `"undefined undefined"`:
+
+箭头函数的 `this` 指向从执行上下文继承。箭头函数不会绑定 `this`，所以它的值将会在调用栈中查找，代码中的 `car.fullName()` 不会运行，并返回字符串 `"undefined undefined"`：
 
 ```jsx
 const car = {
@@ -619,11 +641,19 @@ const car = {
 
 Due to this, arrow functions are not suited as object methods.
 
+因此，箭头函数不适合作为对象的方法。
+
 Arrow functions cannot be used as constructors either, when instantiating an object will raise a  `TypeError`.
+
+箭头函数也不能作为构造函数，实例化一个对象时会抛出 `TypeError` 异常。
 
 This is where regular functions should be used instead,  **when dynamic context is not needed**.
 
+当不需要使用动态上下文时，应该使用常规函数。
+
 This is also a problem when handling events. DOM Event listeners set  `this`  to be the target element, and if you rely on  `this`  in an event handler, a regular function is necessary:
+
+处理事件时这也是一个问题。DOM 事件监听器将 `this` 设置为目标元素，如果你在事件处理函数中用到 `this`，则必须使用常规函数。
 
 ```jsx
 const link = document.querySelector('#link')
@@ -637,7 +667,11 @@ link.addEventListener('click', () => {
 
 You can expand an array, an object or a string using the spread operator  `...`.
 
+你可以使用 `...` 操作符展开数组，对象和字符串。
+
 Let’s start with an array example. Given
+
+以一个数组的例子开始。
 
 ```jsx
 const a = [1, 2, 3]
@@ -645,17 +679,23 @@ const a = [1, 2, 3]
 
 you can create a new array using
 
+你可创建一个新数组
+
 ```jsx
 const b = [...a, 4, 5, 6]
 ```
 
 You can also create a copy of an array using
 
+你也可以复制数组
+
 ```jsx
 const c = [...a]
 ```
 
 This works for objects as well. Clone an object with:
+
+
 
 ```jsx
 const newObj = { ...oldObj }
@@ -1582,16 +1622,25 @@ import React, { Component } from 'react'
 `Webpack is probably going to still be a huge player even if ES Modules land in the browser, but having such a feature directly built in the language is huge for a unification of how modules work client-side and on Node.js as well.`
 
 ### `SECTION 2: REACT CONCEPTS`
-
+### `第二节：React 核心概念`
 ### `Single Page Applications`
+### `单页应用`
 
 `React Applications are also called Single Page Applications. What does this mean?`
 
+`React 应用也称为单页应用。这意味着什么？`
+
 `In the past, when browsers were much less capable than today, and JavaScript performance was poor, every page was coming from a server. Every time you clicked something, a new request was made to the server and the browser subsequently loaded the new page.`
+
+在以前，浏览器的能力远低于现在，JavaScript性能差，每个页面都来自服务器。每次你点击一些东西，会向服务器发送一个新的请求，随后浏览器加载页面。
 
 `Only very innovative products worked differently, and experimented with new approaches.`
 
+只有富有创意的产品还会以不同的方式运行，并尝试新的方法。
+
 `Today, popularized by modern frontend JavaScript frameworks like React, an app is usually built as a single page application: you only load the application code (HTML,  [CSS][79],  [JavaScript][80]) once, and when you interact with the application, what generally happens is that JavaScript intercepts the browser events and instead of making a new request to the server that then returns a new document, the client requests some JSON or performs an action on the server but the page that the user sees is never completely wiped away, and behaves more like a desktop application.`
+
+现在，由于像 React 一样的现代前端框架的流行，通常以单页应用的方式构建应用：你只需要加载一次应用代码(HTML,  [CSS][79],  [JavaScript][80])。
 
 `Single page applications are built in JavaScript (or at least compiled to JavaScript) and work in the browser.`
 
