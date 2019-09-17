@@ -1632,17 +1632,19 @@ import React, { Component } from 'react'
 
 `In the past, when browsers were much less capable than today, and JavaScript performance was poor, every page was coming from a server. Every time you clicked something, a new request was made to the server and the browser subsequently loaded the new page.`
 
-在以前，浏览器的能力远低于现在，JavaScript性能差，每个页面都来自服务器。每次你点击一些东西，会向服务器发送一个新的请求，随后浏览器加载页面。
+`在以前，浏览器的能力远低于现在，JavaScript性能差，每个页面都来自服务器。每次你点击一些东西，会向服务器发送一个新的请求，随后浏览器加载页面。`
 
 `Only very innovative products worked differently, and experimented with new approaches.`
 
-只有富有创意的产品还会以不同的方式运行，并尝试新的方法。
+`只有富有创意的产品还会以不同的方式运行，并尝试新的方法。`
 
 `Today, popularized by modern frontend JavaScript frameworks like React, an app is usually built as a single page application: you only load the application code (HTML,  [CSS][79],  [JavaScript][80]) once, and when you interact with the application, what generally happens is that JavaScript intercepts the browser events and instead of making a new request to the server that then returns a new document, the client requests some JSON or performs an action on the server but the page that the user sees is never completely wiped away, and behaves more like a desktop application.`
 
-现在，由于像 React 一样的现代前端框架的流行，通常以单页应用的方式构建应用：你只需要加载一次应用代码(HTML,  [CSS][79],  [JavaScript][80])。
+`现在，由于像 React 一样的现代前端框架的流行，通常以单页应用的方式构建应用：你只需要加载一次应用代码(HTML,  [CSS][79],  [JavaScript][80])。当你和应用交互时，通常是 JavaScript 拦截浏览器事件而不是向服务器发出新请求，然后返回新文档，客户端请求 JSON 数据或`
 
 `Single page applications are built in JavaScript (or at least compiled to JavaScript) and work in the browser.`
+
+`单页应用由 JavaScript（或至少编译为 JavaScript ）构建并运行在浏览器中。`
 
 `The technology is always the same, but the philosophy and some key components of how the application works are different.`
 
