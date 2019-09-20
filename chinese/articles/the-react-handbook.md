@@ -1648,9 +1648,13 @@ import React, { Component } from 'react'
 
 `The technology is always the same, but the philosophy and some key components of how the application works are different.`
 
+`技术一般都差不多，但应用如何运行的理念和一些关键组件是不同的。`
+
 #### `Examples of Single Page Applications`
+#### `单页应用例子`
 
 `Some notable examples:`
+`一些有名的例子：`
 
 -   `Gmail`
 -   `Google Maps`
@@ -1659,8 +1663,11 @@ import React, { Component } from 'react'
 -   `Google Drive`
 
 #### `Pros and cons of SPAs`
+#### `单页应用的优点和不足`
 
 `An SPA feels much faster to the user, because instead of waiting for the client-server communication to happen, and wait for the browser to re-render the page, you can now have instant feedback. This is the responsibility of the application maker, but you can have transitions and spinners and any kind of UX improvement that is certainly better than the traditional workflow.`
+
+`由于没有客户端-服务端的通信，只需要等待浏览器重新渲染，用户觉得 SPA 应用更快，能得到即时的反馈。`
 
 `In addition to making the experience faster to the user, the server will consume less resources because you can focus on providing an efficient API instead of building the layouts server-side.`
 
