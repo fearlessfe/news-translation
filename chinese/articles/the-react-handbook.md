@@ -1667,33 +1667,58 @@ import React, { Component } from 'react'
 
 `An SPA feels much faster to the user, because instead of waiting for the client-server communication to happen, and wait for the browser to re-render the page, you can now have instant feedback. This is the responsibility of the application maker, but you can have transitions and spinners and any kind of UX improvement that is certainly better than the traditional workflow.`
 
-`由于没有客户端-服务端的通信，只需要等待浏览器重新渲染，用户觉得 SPA 应用更快，能得到即时的反馈。`
+`由于没有客户端-服务端的通信，只需要等待浏览器重新渲染，用户觉得 SPA 应用更快，能得到即时的反馈。这主要和应用作者有关，但是你可以使用过渡或任何优于传统流程的 UX 改进`
 
 `In addition to making the experience faster to the user, the server will consume less resources because you can focus on providing an efficient API instead of building the layouts server-side.`
 
+`除了更快的用户体验外，服务器将消耗更少的资源，因为你可以专注与提供高效的 API，而不是在服务端构建布局。`
+
 `This makes it ideal if you also build a mobile app on top of the API, as you can completely reuse your existing server-side code.`
+
+`如果你还基于 API 构建移动端应用，这将是一个理想的选择，因为你可以完全重用现有的服务端代码。`
 
 `Single Page Applications are easy to transform into Progressive Web Apps, which in turn enables you to provide local caching and to support offline experiences for your services (or simply a better error message if your users need to be online).`
 
+`单页应用程序很容易转换为渐进式 Web 应用，这使你能够为你的应用提供本地缓存和离线访问的能力（如果用户需要在线，则可以提供更好的错误提醒）。`
+
 `SPAs are best used when there is no need for SEO (search engine optimization). For example for apps that work behind a login.`
+
+`当你不需要 SEO(搜索引擎优化) 时，单页应用是最好的选择。例如需要登录后才能使用的应用。`
 
 `Search engines, while improving every day, still have trouble indexing sites built with an SPA approach rather than the traditional server-rendered pages. This is the case for blogs. If you are going to rely on search engines, don’t even bother with creating a single page application without having a server rendered part as well.`
 
+`虽然搜索引擎每天都在进步，但仍然难以为 SPA 方式而不是传统服务端渲染的页面构建索引。博客就是这种情况。如果你将依赖搜索引擎，不必担心，你仍可以创建单页应用，利用服务端来渲染部分页面。`
+
 `When coding an SPA, you are going to write a great deal of JavaScript. Since the app can be long-running, you are going to need to pay a lot more attention to possible memory leaks — if in the past your page had a lifespan that was counted in minutes, now an SPA might stay open for hours at a time and if there is any memory issue that’s going to increase the browser memory usage by a lot more and it’s going to cause an unpleasantly slow experience if you don’t take care of it.`
+
+`在编码单页应用程序时，你将编写大量 JavaScript 代码。由于应用可以长时间的运行，你需要多加注意可能的内存泄漏--如果过去页面的生命周期以分钟计，现在单页应用程序可能持续运行几个小时。对于任意内存问题，如果没有处理好，将会大量增加浏览器内存使用量，引起令人不愉快的缓慢体验。`
 
 `SPAs are great when working in teams. Backend developers can just focus on the API, and frontend developers can focus on creating the best user experience, making use of the API built in the backend.`
 
+`单页应用很适合团队合作。后端开发者只专注于开发 API，前端开发者专注于使用后端 API 创造最佳的用户体验。`
+
 `As a con, Single Page Apps rely heavily on JavaScript. This might make using an application running on low power devices a poor experience in terms of speed. Also, some of your visitors might just have JavaScript disabled, and you also need to consider accessibility for anything you build.`
 
+`单页应用的缺点是严重依赖 JavaScript。在低功耗设备上运行应用程序时，在速度方面的体验较差。例外，一些访问者可能会禁用 JavaScript，这样你还需要考虑构建内容的可访问性。`
+
 #### `Overriding the navigation`
+#### `覆盖导航`
 
 `Since you get rid of the default browser navigation, URLs must be managed manually.`
 
+`由于脱离了默认的浏览器导航，你必须手动管理 URLs。`
+
 `This part of an application is called the router. Some frameworks already take care of them for you (like Ember), others require libraries that will do this job (like  [React Router][81]).`
+
+`应用的这部分成为路由器。一些框架已经为你准备好了（如 Ember），其它框架则需要依赖可以完成该工作的库（如 [React Router][81]）。`
 
 `What’s the problem? In the beginning, this was an afterthought for developers building Single Page Applications. This caused the common “broken back button” issue: when navigating inside the application the URL didn’t change (since the browser default navigation was hijacked) and hitting the back button, a common operation that users do to go to the previous screen, might move to a website you visited a long time ago.`
 
+`那有什么问题呢？在一开始，这是开发者构建单页应用后的想法。这引起了常见的 “后退按钮” 的问题：当在应用内导航时，URL 不会变化（由于浏览器默认导航被劫持），然后点击后退按钮，这是用户常见操作，以转到上一个页面，可能会导航到你很久以前访问过的网站。`
+
 `This problem can now be solved using the  [History API][82]  offered by browsers, but most of the time you’ll use a library that internally uses that API, like  **React Router**.`
+
+`现在，你可以使用浏览器提供的 [History API][82]，但大多数时候你可以使用封装了 History API 的库，例如 **React Router**。`
 
 ### `Declarative`
 
