@@ -1721,19 +1721,32 @@ import React, { Component } from 'react'
 `现在，你可以使用浏览器提供的 [History API][82]，但大多数时候你可以使用封装了 History API 的库，例如 **React Router**。`
 
 ### `Declarative`
+### `声明式`
 
 `What does it mean when you read that React is declarative? You’ll run across articles describing React as a  **declarative approach to building UIs**.`
 
+`当你看到 React 是声明式时，这意味着什么？你将会看到很多文章将 React 描述为 **用声明式的方式来构建 UI**。`
+
 `React made its “declarative approach” quite popular and upfront so it permeated the frontend world along with React.`
+
+`React 使得“声明式方式”非常流行，它和 React 一起渗透到前端世界中。`
 
 `It’s really not a new concept, but React took building UIs a lot more declaratively than with HTML templates:`
 
+`这确实不是一个新概念，但和 HTML 模版比起来，用 React 构建 UI 更具声明式。`
+
 -   `you can build Web interfaces without even touching the DOM directly`
 -   `you can have an event system without having to interact with the actual DOM Events.`
+-   `你不必直接操作 DOM 就能构建 Web 界面`
+-   `你不必和真实的 DOM 事件交互也具有事件系统。`
 
 `The opposite of declarative is  **imperative**. A common example of an imperative approach is looking up elements in the DOM using jQuery or DOM events. You tell the browser exactly what to do, instead of telling it what you need.`
 
+`和声明式相反的是**命令式**。一个常见命令式方式的例子就是使用 jQuery 或 DOM 事件来查找元素。你告诉浏览器该怎么做，而不是你需要什么。`
+
 `The React declarative approach abstracts that for us. We just tell React we want a component to be rendered in a specific way, and we never have to interact with the DOM to reference it later.`
+
+
 
 ### `Immutability`
 
