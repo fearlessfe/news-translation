@@ -1746,43 +1746,77 @@ import React, { Component } from 'react'
 
 `The React declarative approach abstracts that for us. We just tell React we want a component to be rendered in a specific way, and we never have to interact with the DOM to reference it later.`
 
-
+`React 声明式方式为我们做了抽象。我们只需要告诉 React 如何去渲染一个组件，不需要和 DOM 交互。`
 
 ### `Immutability`
+### `不变性`
 
 `One concept you will likely meet when programming in React is immutability (and its opposite, mutability).`
 
+`使用 React 编程时你可能会遇到的一个概念是不变性（与之相反的是可变性）。`
+
 `It’s a controversial topic, but whatever you might think about the concept of immutability, React and most of its ecosystem kind of forces this, so you need to at least have a grasp of why it’s so important and the implications of it.`
+
+`这是一个有争议的话题，但是无论你怎么考虑不变性， React 和它的大部分生态都遵循这个概念，所以至少你应该了解它的含义以及为什么它如此重要。`
 
 `In programming, a variable is immutable when its value cannot change after it’s created.`
 
+`在程序中，当一个变量创建后无法更改，则这个变量是不可变的。`
+
 `You are already using immutable variables without knowing it when you manipulate a string. Strings are immutable by default, when you change them in reality you create a new string and assign it to the same variable name.`
+
+`可能你还没有意识到，当你在操作字符串时就已经使用到了不可变变量。默认情况下，字符串是不可变的，当你更改它时，实际上是创建了一个新的字符串，然后将其分配给相同的变量名称。`
 
 `An immutable variable can never be changed. To update its value, you create a new variable.`
 
+`不可变变量永远无法改变。要改变它的值，只能重新创建一个新的变量。`
+
 `The same applies to objects and arrays.`
+
+`这同样适用于对象和数组。`
 
 `Instead of changing an array, to add a new item you create a new array by concatenating the old array, plus the new item.`
 
+`为数组新增一个元素时，是创建一个新的数组，将老的数组和新的元素连在一起，赋值给新的数组，而不是修改数组。`
+
 `An object is never updated, but copied before changing it.`
+
+`对象从不更新，但在更改之前先复制旧的对象。`
 
 `This applies to React in many places.`
 
+`这在 React 中很多地方都适用。`
+
 ``For example, you should never mutate the  `state`  property of a component directly, but only through the  `setState()`  method.``
+
+``例如，你不应该直接修改组件的 `state`，只能通过 `setState()` 方法修改。``
 
 `In Redux, you never mutate the state directly, but only through reducers, which are functions.`
 
+`在 Redux 中，你不能直接修改状态，只能通过 reducers 函数。`
+
 `The question is, why?`
 
+`为什么要这么做？`
+
 `There are various reasons, the most important of which are:`
+
+`原因有很多，最重要的是：`
 
 -   `Mutations can be centralized, like in the case of Redux, which improves your debugging capabilities and reduces sources of errors.`
 -   `Code looks cleaner and simpler to understand. You never expect a function to change some value without you knowing, which gives you  **predictability**. When a function does not mutate objects but just returns a new object, it’s called a pure function.`
 -   `The library can optimize the code because for example JavaScript is faster when swapping an old object reference for an entirely new object, rather than mutating an existing object. This gives you  **performance**.`
 
+-  `改变操作集中了，例如 Redux，这样更利于调试并减少错误。`
+-  `代码看起来更简洁易懂。你永远不会希望函数会在你不知情的情况下改变某些值，这给你带来了 **可预测性**。当一个函数仅仅返回一个一个新对象而不修改对象时，这个函数称为纯函数。`
+-  `由于 JavaScript 将旧对象引用替换为全新对象比对现有对象进行修改要更快，因此使用库能优化代码并提高性能。`
+
 ### `Purity`
+### `单纯性`
 
 `In JavaScript, when a function does not mutate objects but just returns a new object, it’s called a pure function.`
+
+`在 JavaScript 中，当一个函数不改变对象而是放回一个新的对象，这样的函数被称为纯函数。`
 
 `A function, or a method, in order to be called  _pure_  should not cause side effects and should return the same output when called multiple times with the same input.`
 
