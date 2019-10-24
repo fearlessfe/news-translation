@@ -340,49 +340,83 @@ This is when it finished running:
 
 It also added a few commands in the  `package.json`  file, so you can immediately start the app by going into the folder and run  `npm start`.
 
+在 `package.json` 文件中也增加了一些命令，你进入项目目录，运行 `npm start` 就可以启动应用了。
+
 ![](https://cdn-media-1.freecodecamp.org/images/bIcUqq3FBoasmTjSSeYJ1LA4yMndxfNF12nu)
 
 ![](https://cdn-media-1.freecodecamp.org/images/bD33lX4Yp0WYlgDNGCwr3Otftsstxvx1HvTQ)
 
 In addition to  `npm start`,  `create-react-app`  added a few other commands:
 
+除了 `npm start`，`create-react-app` 也增加了一些其它命令：
+
 -   `npm run build`: to build the React application files in the  `build`  folder, ready to be deployed to a server
 -   `npm test`: to run the testing suite using  [Jest][60]
 -   `npm eject`: to eject from  `create-react-app`
 
+-   `npm run build`: 在 `build` 文件夹中构建 React 应用程序文件，准备将其部署至服务器 
+-   `npm test`: 使用 [Jest][60] 运行测试套件
+-   `npm eject`: 从 `create-react-app` 弹出 Webpack 配置文件
+
 Ejecting is the act of deciding that  `create-react-app`  has done enough for you, but you want to do more than what it allows.
+
+`create-react-app` 已经做了足够多的配置，但当你想要更多的配置项时，可以运行弹出操作。
 
 Since  `create-react-app`  is a set of common denominator conventions and a limited amount of options, it's probable that at some point your needs will demand something unique that outgrows the capabilities of  `create-react-app`.
 
+`create-react-app` 只是一组通用功能的约定以及有限的选项，也许在某些时候，`create-react-app` 会无法满足你的需求。
+
 When you eject, you lose the ability of automatic updates but you gain more flexibility in the  [Babel][61]  and  [Webpack][62]  configuration.
+
+当你弹出配置后，你失去了自动更你配置的能力，但你能够更加灵活的去配置 [Babel][61] 和 [Webpack][62]。
 
 When you eject the action is irreversible. You will get 2 new folders in your application directory,  `config`  and  `scripts`. Those contain the configurations - and now you can start editing them.
 
+弹出操作是不可逆的。但你执行该命令后，你会发现项目目录中多了 `config` 和 `scripts` 两个文件夹。这里面包含着配置文件 - 现在你可以编辑他们了。
+
 > _If you already have a React app installed using an older version of React, first check the version by adding  `console.log(React.version)`  in your app, then you can update by running  `yarn add  [react@16.7][63]`, and yarn will prompt you to update (choose the latest version available). Repeat for  `yarn add  [react-dom@16.7][64]`  (change "16.7" with whatever is the newest version of React at the moment)_
 
+> _如果你已经在 React 应用中使用旧版 React，首先在你的应用中添加 `console.log(React.version)` 来查看 React 版本，然后运行 `yarn add [react@16.7][63]` 来更行，yarn 将会提示你更新（选择最新的可用版本）。再次运行 `yarn add [react-dom@16.7][64]`（将 16.7 变为目前最新的版本）_
+
+#### CodeSandbox
 #### CodeSandbox
 
 An easy way to have the  `create-react-app`  structure, without installing it, is to go to  [https://codesandbox.io/s][65]  and choose "React".
+
+一种不用安装 `create-react-app` 就能获得其项目结构的方式是去 [https://codesandbox.io/s][65] 网站并选择 React。
 
 ![](https://cdn-media-1.freecodecamp.org/images/DQRfUlIow3Z-icJy6XcMwTWh7gd8ZCwac02l)
 
 CodeSandbox is a great way to start a React project without having to install it locally.
 
+CodeSandbox 是一个无需在本地安装即可启动一个 React 项目的好方法。
+
+#### Codepen
 #### Codepen
 
 Another great solution is  [Codepen][66].
 
+另一个好办法是 [Codepen][66]。
+
 You can use this Codepen starter project which already comes pre-configured with React, with support for Hooks:  [https://codepen.io/flaviocopes/pen/VqeaxB][67]
+
+你可以使用这个已经预先配置好 React 并支持 Hooks 的 Codepen 入门项目：[https://codepen.io/flaviocopes/pen/VqeaxB][67]
 
 Codepen “pens” are great for quick projects with one JavaScript file, while “projects” are great for projects with multiple files, like the ones we’ll use the most when building React apps.
 
+Codepen 中 "pens" 适合单 JavaScript 文件的项目，而 "projects" 适合多文件的项目，和我们构建 React 项目使用最多的项目一样。
+
+
 One thing to note is that in Codepen, due to how it works internally, you don’t use the regular ES Modules  `import`  syntax, but rather to import for example  `useState`, you use
+
+需要注意的是，由于 Codepen 的内部工作方式，你不能使用常规的 ES Modules 的 `import` 语法，而是要想下面的例子一样导入：
 
 ```jsx
 const { useState } = React
 ```
 
 and not
+而不是
 
 ```jsx
 import { useState } from 'react'
