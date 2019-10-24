@@ -300,17 +300,27 @@ Starting in this way with script tags is good for building prototypes and enable
 
 `create-react-app`  is a project aimed at getting you up to speed with React in no time, and any React app that needs to outgrow a single page will find that  `create-react-app`meets that need.
 
-`create-react-app` 项目旨在让你快速搭建 React 项目，`create-react-app` 满足所有超过一页的 React 应用的需求。
+`create-react-app` 项目旨在让你快速搭建 React 项目，`create-react-app` 也满足所有多页 React 应用的需求。
 
 You start by using  `[npx][56]`, which is an easy way to download and execute Node.js commands without installing them.  `npx`  comes with  `npm`  (since version 5.2) and if you don't have npm installed already, do it now from  [https://nodejs.org][57]  (npm is installed with Node).
 
+你可以从使用 `[npx][56]` 开始，这是一种无需安装便可下载和执行 Node.js 命令的方式。从 5.2 版本开始，`npm` 自带 `npx`,如果你还没有安装npm，从 [https://nodejs.org][57] 安装，Node 自带 npm。
+
 If you are unsure which version of npm you have, run  `npm -v`  to check if you need to update.
+
+如果你不清楚你安装什么版本的 npm，执行 `npm -v` 来查看你是否需要升级。
 
 > _Tip: check out my  [OSX terminal tutorial][58]  if you’re unfamiliar with using the terminal, applies to Linux as well — I’m sorry but I don’t have a tutorial for Windows at the moment, but Google is your friend._
 
+> _提示: 如果你对使用终端不熟悉，可以查看我的 [OSX终端教程][58]，这对于 Linux 也同样适用 — 我很抱歉目前没有 Windows 相关的教程，但你可以在 Google 上搜索。_
+
 When you run  `npx create-react-app <app-name>`,  `npx`  is going to  _download_ the most recent  `create-react-app`  release, run it, and then remove it from your system. This is great because you will never have an outdated version on your system, and every time you run it, you're getting the latest and greatest code available.
 
+当你运行 `npx create-react-app <app-name>` 命令时，`npm` 将会_下载_最新的 `create-react-app`，执行它，然后将它删除。这样你系统中永远不会有过时的版本，每次你运行时，你都可以获得最新的版本。
+
 Let’s start then:
+
+接下来开始运行：
 
 ```bash
 npx create-react-app todolist
@@ -320,9 +330,13 @@ npx create-react-app todolist
 
 This is when it finished running:
 
+运行完成时:
+
 ![](https://cdn-media-1.freecodecamp.org/images/yJPelCCT4muE3FcEci5CIDm4GEyy5rvdh6R5)
 
 `create-react-app`  created a files structure in the folder you told (`todolist`  in this case), and initialized a  [Git][59]  repository.
+
+`create-react-app` 在指定文件夹（本例中为 `todolist`）中创建了文件结构，并初始化一个 [Git][59] 仓库。
 
 It also added a few commands in the  `package.json`  file, so you can immediately start the app by going into the folder and run  `npm start`.
 
