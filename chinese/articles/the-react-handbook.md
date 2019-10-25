@@ -37,7 +37,7 @@ You can get this ebook in PDF, ePub and Mobi format at  [reacthandbook.com][2]
 
 ****SECTION 1****: MODERN JAVASCRIPT CORE CONCEPTS YOU NEED TO KNOW TO USE REACT
 
-****第一节****: 你需要掌握的现代 JAVASCRIPT 核心概念
+****第一节****: React 前置知识：现代 JAVASCRIPT 核心概念
 
 -   [Variables][5]  [变量][5]
 -   [Arrow functions][6]   [箭头函数][6]
@@ -423,29 +423,45 @@ import { useState } from 'react'
 ```
 
 ### SECTION 1: MODERN JAVASCRIPT CORE CONCEPTS YOU NEED TO KNOW TO USE REACT
+### React 前置知识：现代 JAVASCRIPT 核心概念
 
 #### Find out if you have to learn something before diving into learning React
+#### 深入学习 React 之前，看看你是否具备这些前置知识
 
 If you are willing to learn React, you first need to have a few things under your belt. There are some prerequisite technologies you have to be familiar with, in particular related to some of the more recent JavaScript features you’ll use over and over in React.
 
+如果你愿意学习 React，那你需要掌握一些知识。你必须熟悉一些前置知识，特别是与最新 JavaScript 特性相关，而且在 React 中会反复使用的特性。
+
 Sometimes people think one particular feature is provided by React, but instead it’s just modern JavaScript syntax.
+
+有时，有人认为 React 提供了一项特定功能，但这仅仅是现代 JavaScript 语法。
 
 There is no point in being an expert in those topics right away, but the more you dive into React, the more you’ll need to master those.
 
+在这些知识点上，马上成为专家是不可能的，但随着你更加深入的了解 React，你就更需要掌握这些。
+
 I will mention a list of things to get you up to speed quickly.
+
+下面我将列出一些你需要快速掌握的知识点。
 
 ### Variables
 ### 变量
 
 A variable is a literal assigned to an identifier, so you can reference and use it later in the program.
 
-变量是
+变量是分配给标识符的文本，因此你可以在程序中引用和使用它。
 
 Variables in JavaScript do not have any type attached. Once you assign a specific literal type to a variable, you can later reassign the variable to host any other type, without type errors or any issue.
 
+JavaScript 中的变量没有附加任何类型。在你为变量赋予特定类型的值后，你可以再次为该变量赋任何类型的值，而不会引起类型错误或其它问题。
+
 This is why JavaScript is sometimes referred to as “untyped”.
 
+这就是为什么 JavaScript 有时被称为 “无类型语言”
+
 A variable must be declared before you can use it. There are 3 ways to do this, using  `var`,  `let`  or  `const`, and those 3 ways differ in how you can interact with the variable later on.
+
+变量必须先声明，再使用。有三种方式可以声明一个变量，即 `var`，`let`，`const`。这三种方式声明的变量用起来有所不同。
 
 #### Using  `var`
 #### 使用 `var`
@@ -743,13 +759,15 @@ const c = [...a]
 
 This works for objects as well. Clone an object with:
 
-
+这也适用于对象。使用下面语句来复制一个对象：
 
 ```jsx
 const newObj = { ...oldObj }
 ```
 
 Using strings, the spread operator creates an array with each char in the string:
+
+对于字符串，展开操作符创建了一个以字符串中每个字符为元素的数组：
 
 ```jsx
 const hey = 'hey'
@@ -758,6 +776,8 @@ const arrayized = [...hey] // ['h', 'e', 'y']
 
 This operator has some pretty useful applications. The most important one is the ability to use an array as function argument in a very simple way:
 
+展开操作符有一些非常实用的用法。最重要一个的是以简洁的方式将数组作为函数参数。
+
 ```jsx
 const f = (foo, bar) => {}
 const a = [1, 2]
@@ -765,16 +785,17 @@ f(...a)
 ```
 
 (in the past you could do this using  `f.apply(null, a)`  but that's not as nice and readable)
+（在以前你可能会使用 `f.apply(null, a)`，但这既不美观，也不具备可读性）
 
 The  **rest element**  is useful when working with  **array destructuring**:
-
+在**数组解构**时，**剩余元素**非常有用：
 ```jsx
 const numbers = [1, 2, 3, 4, 5]
 [first, second, ...others] = numbers
 ```
 
 and  **spread elements**:
-
+**展开元素**：
 ```jsx
 const numbers = [1, 2, 3, 4, 5]
 const sum = (a, b, c, d, e) => a + b + c + d + e
@@ -782,9 +803,10 @@ const sumOfNumbers = sum(...numbers)
 ```
 
 ES2018 introduces rest properties, which are the same but for objects.
+ES2018 引入了剩余属性，和剩余元素功能一样，但是是用于对象。
 
 **Rest properties**:
-
+**剩余属性**：
 ```jsx
 const { first, second, ...others } = {
   first: 1,
