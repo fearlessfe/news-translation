@@ -819,15 +819,17 @@ const { first, second, ...others } = {
 ```
 
 **Spread properties**  allow to create a new object by combining the properties of the object passed after the spread operator:
-
+**展开属性**能够让你利用对象属性和展开操作符创建新的对象。
 ```jsx
 const items = { first, second, ...others }
 items //{ first: 1, second: 2, third: 3, fourth: 4, fifth: 5 }
 ```
 
 ### Object and array destructuring
+### 对象和数组的解构
 
 Given an object, using the destructuring syntax you can extract just some values and put them into named variables:
+对于给定的对象，使用解构的语法可以取出部分属性的值并赋给命名的变量。
 
 ```jsx
 const person = {
@@ -840,8 +842,10 @@ const person = {
 ```
 
 `name`  and  `age`  contain the desired values.
+`name` 和 `age` 包含了期望的值。
 
 The syntax also works on arrays:
+解构语法也适用于数组：
 
 ```jsx
 const a = [1, 2, 3, 4, 5]
@@ -849,29 +853,34 @@ const [first, second] = a
 ```
 
 This statement creates 3 new variables by getting the items with index 0, 1, 4 from the array  `a`:
-
+下面的语句创建了三个变量并取到了数组 `a` 中下标为 0，1，4 的值：
 ```jsx
 const [first, second, , , fifth] = a
 ```
 
 ### Template literals
+### 模板字符串
 
 Template Literals are a new ES2015 / ES6 feature that allows you to work with strings in a novel way compared to ES5 and below.
+模板字符串是 ES2015 / ES6 的新特性，和 ES5 及一下版本相比，它能让你以新的方式来处理字符串。
 
 The syntax at a first glance is very simple, just use backticks instead of single or double quotes:
-
+语法看起来非常简单，只需将单引号或双引号改为反引号。
 ```jsx
 const a_string = something
 ```
 
 They are unique because they provide a lot of features that normal strings built with quotes do not, in particular:
+它们之所以独特，是因为它们提供了许多用引号构建的普通字符串所没有的特性，特别是：
 
 -   they offer a great syntax to define multiline strings
 -   they provide an easy way to interpolate variables and expressions in strings
 -   they allow you to create DSLs with template tags (DSL means domain specific language, and it’s for example used in React by Styled Components, to define CSS for a component)
-
+-   它们提供了良好的语法来定义多行字符串
+-   它们提供了在字符串中插入变量和表达式的简单方法。
+-   
 Let’s dive into each of these in detail.
-
+让我们深入的去了解这些特性。
 #### Multiline strings
 
 Pre-ES6, to create a string spanning over two lines you had to use the  `</code>  character at the end of a line:`
