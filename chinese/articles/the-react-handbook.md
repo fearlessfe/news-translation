@@ -878,38 +878,41 @@ They are unique because they provide a lot of features that normal strings built
 -   they allow you to create DSLs with template tags (DSL means domain specific language, and it’s for example used in React by Styled Components, to define CSS for a component)
 -   它们提供了良好的语法来定义多行字符串
 -   它们提供了在字符串中插入变量和表达式的简单方法。
--   
+-   它们允许你使用模板标签创建领域特定语言（DSL 是领域特定语言，React 中 Styled Components 用到了它，为组件定义 CSS）
 Let’s dive into each of these in detail.
 让我们深入的去了解这些特性。
 #### Multiline strings
 
 Pre-ES6, to create a string spanning over two lines you had to use the  `</code>  character at the end of a line:`
-
+在 ES6 之前，创建多行字符串需要在行末尾使用 `</code>`：
 ```
 const string =
   'first part second part'
 ```
 
 `This allows to create a string on 2 lines, but it’s rendered on just one line:`
+`这能让你在两行创建一个字符串，但显示时只有一行：`
 
 `` `first part second part` ``
 
 ``To render the string on multiple lines as well, you explicitly need to add  `\n`  at the end of each line, like this:``
-
+``要在多行显示字符串，你需要在每行末尾添加 `\n`，如下所示：``
 ```
 const string =
   'first line\n second line'
 ```
 
 `or`
+`或者`
 
 ```
 const string = 'first line\n' + 'second line'
 ```
 
 `Template literals make multiline strings much simpler.`
-
+`模版字符串可以更简单的使用多行字符串。`
 `Once a template literal is opened with the backtick, you just press enter to create a new line, with no special characters, and it’s rendered as-is:`
+`使用模版字符串，你只需要按回车键创建一个没有特殊字符的新行，它将按如下方式展现：`
 
 ```
 const string = Hey
@@ -919,14 +922,14 @@ is awesome!
 ```
 
 `Keep in mind that space is meaningful, so doing this:`
-
+`记住，空格是有意义的，执行下面的语句：`
 ```
 const string = First
                 Second
 ```
 
 `is going to create a string like this:`
-
+`将会按如下方式创建字符串：`
 ```
 First
                 Second
